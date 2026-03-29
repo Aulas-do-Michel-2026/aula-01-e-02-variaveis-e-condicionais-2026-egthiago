@@ -88,3 +88,15 @@ Esse exercício está com uma resolução no notebook da aula.
 
 Tente, se não der, olhe lá!
 """
+
+gene = input('Informe o gene da variante: ').upper()
+freq_populacional = float(input('Informe a frequência populacional da variante: '))
+reads = int(input('Informe o número de reads da variante: '))
+vaf = float(input('Informe a VAF da variante (%): '))
+impacto = input('Informe o impacto da variante: ').upper()
+genes_excedentes = (gene == 'HFE') or (gene == 'MEFV') or (gene == 'GJB2')
+
+if impacto != 'ALTO' or reads <= 10 or vaf < 20 or (freq_populacional >5 and not genes_excedentes):
+    print(f'A variante do gene {gene} não é relevante.')
+else:
+    print(f'A variante do gene {gene} é relevante.')
