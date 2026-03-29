@@ -42,6 +42,6 @@ cromossomo = input('Insira o cromossomo da variante no formato "chrX": ').lower(
 posicao = int(input('Insira a posição da variante: '))
 
 if cromossomo == 'chr17' and 41196312 <= posicao <= 41277500:
-    print('A variante se encontra no gene BRCA1')
+    print('Sim')
 else:
-    print('A variante não se encontra no gene BRCA1')
+    print('Não')
