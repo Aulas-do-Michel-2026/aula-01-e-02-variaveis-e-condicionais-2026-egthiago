@@ -61,8 +61,8 @@ posicao = int(input('Insira a posição da variante: '))
 referencia = input('Insira o genoma de referencia: ').lower().strip()
 
 if (cromossomo == 'chr17') and ((referencia == 'hg19' and 41196312 <= posicao <= 41277500) or (referencia == 'hg38' and 43044295 <= posicao <= 43125483)):
-    print('A variante se encontra no gene BRCA1')
+    print('Sim')
 elif referencia != 'hg19' and referencia != 'hg38':
     print('Confira seu genoma de referência.')
 else:
-    print('A variante não se encontra no gene BRCA1')
+    print('Não')
