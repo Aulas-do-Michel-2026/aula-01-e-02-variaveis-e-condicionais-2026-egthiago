@@ -52,3 +52,19 @@ Qual país você vai viajar? China
 Resposta:
 Não temos essa moeda em caixa.
 """
+
+viagem = input('Qual o destino da sua viagem? ').lower()
+
+if viagem == 'estados unidos' or viagem == 'japão' or viagem == 'argentina':
+    valor = float(input('Qual o valor em BRL que você deseja converter: '))
+
+    if viagem == 'estados unidos':
+        print(f'{valor / 5:.2f} USD')
+    elif viagem == 'japão':
+        print(f'{valor * 30:.2f} JPY')
+    else:
+        print(f'{valor * 180:.2f} ARS')
+
+
+else:
+    print('Não possuímos essa moeda em caixa. ')
